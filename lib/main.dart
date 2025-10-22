@@ -60,7 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Text(
-              'Eljean Jane Barquillo',
+              'Eljean Grace Barquillo',
               style: GoogleFonts.robotoSlab(
                 color: const Color(0XFF44174E),
                 fontSize: 28,
