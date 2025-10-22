@@ -59,6 +59,14 @@ class _MyHomePageState extends State<MyHomePage> {
                 fontWeight: FontWeight.w600,
               ),
             ),
+            Text(
+              'Eljean Jane Barquillo',
+              style: GoogleFonts.robotoSlab(
+                color: const Color(0XFF44174E),
+                fontSize: 28,
+                fontWeight: FontWeight.w600,
+              )
+            )
           ],
         ),
       ),
