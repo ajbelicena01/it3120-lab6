@@ -13,10 +13,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'IT3120 - LAB 6',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFFDAD7CD)),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFFEAF2EF)),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'IT3120 - Lab 6'),
+      home: const MyHomePage(title: 'IT3120 - LAB 6'),
     );
   }
 }
@@ -53,7 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
             const SizedBox(height: 16),
             Text(
               'Hannah Shayne Bayogos',
-              style: GoogleFonts.bebasNeue(
+              style: GoogleFonts.Montserrat(
                 color: const Color(0xFF19305C),
                 fontSize: 28,
                 fontWeight: FontWeight.w600,
