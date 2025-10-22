@@ -13,10 +13,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'IT3120 - LAB 6',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFFDAD7CD)),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFFF4EEFF)),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'IT3120 - Lab 6'),
+      home: const MyHomePage(title: 'IT3120 - LAB 6'),
     );
   }
 }
