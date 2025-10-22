@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -37,32 +38,30 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-        body: const Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center, // centers vertically
-            children: [
-              Text(
-                'Angel Jen Belicena',
-                style: TextStyle(
-                  color: Color(0xFF007e5d),
-                  fontFamily: 'poppins',
-                  fontSize: 28,
-                  fontWeight: FontWeight.w600,
-                ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center, // centers vertically
+          children: [
+            Text(
+              'Angel Jen Belicena',
+              style: GoogleFonts.poppins(
+                color: const Color(0xFF007e5d),
+                fontSize: 28,
+                fontWeight: FontWeight.w600,
               ),
-              SizedBox(height: 16),
-              Text(
-                'Hannah Shayne Bayogos',
-                style: TextStyle(
-                  color: Color(0xFF19305C),
-                  fontFamily: 'bebas',
-                  fontSize: 24,
-                  fontWeight: FontWeight.w500,
-                ),
+            ),
+            const SizedBox(height: 16),
+            Text(
+              'Hannah Shayne Bayogos',
+              style: GoogleFonts.montserrat(
+                color: const Color(0xFF19305C),
+                fontSize: 28,
+                fontWeight: FontWeight.w600,
               ),
-            ],
-          ),
+            ),
+          ],
         ),
+      ),
     );
   }
 }
