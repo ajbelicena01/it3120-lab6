@@ -40,7 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center, // centers vertically
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
               'Angel Jen Belicena',
@@ -53,7 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
             const SizedBox(height: 16),
             Text(
               'Hannah Shayne Bayogos',
-              style: GoogleFonts.montserrat(
+              style: GoogleFonts.bebasNeue(
                 color: const Color(0xFF19305C),
                 fontSize: 28,
                 fontWeight: FontWeight.w600,
