@@ -37,17 +37,32 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: const Center(
-        child: Text(
-          'Angel Jen Belicena',
-          style: TextStyle(
-            color: Color(0xFF007e5d),
-            fontFamily: 'Poppins',
-            fontSize: 28,
-            fontWeight: FontWeight.w600,
+        body: const Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center, // centers vertically
+            children: [
+              Text(
+                'Angel Jen Belicena',
+                style: TextStyle(
+                  color: Color(0xFF007e5d),
+                  fontFamily: 'poppins',
+                  fontSize: 28,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              SizedBox(height: 16),
+              Text(
+                'Hannah Shayne Bayogos',
+                style: TextStyle(
+                  color: Color(0xFF19305C),
+                  fontFamily: 'bebas',
+                  fontSize: 24,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ],
           ),
         ),
-      ),
     );
   }
 }
