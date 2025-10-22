@@ -11,9 +11,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Lab 6 - Flutter',
+      title: 'IT3120 - LAB 6',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF912f56)),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFFDAD7CD)),
         useMaterial3: true,
       ),
       home: const MyHomePage(title: 'IT3120 - Lab 6'),
