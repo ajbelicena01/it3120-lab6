@@ -12,17 +12,18 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'IT3120 - LAB 6 3A NT',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF3F51B5)),
         useMaterial3: true,
         appBarTheme: AppBarTheme(
-          backgroundColor: const Color(0xFF448AFF), //title background color
           titleTextStyle: GoogleFonts.poppins(
-            color: const Color(0xFFFFFFFF), //title color
-            fontSize: 24,
+            color: Colors.white,
+            fontSize: 22,
             fontWeight: FontWeight.w600,
           ),
           iconTheme: const IconThemeData(color: Colors.white),
+          centerTitle: true,
         ),
       ),
       home: const MyHomePage(title: 'IT3120 - Lab 6 3A NT'),
@@ -30,69 +31,84 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MyHomePage extends StatefulWidget {
+class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key, required this.title});
 
   final String title;
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFE0F7FA), //dalom title na background
+      backgroundColor: const Color(0xFFF0F8FF),
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text(title),
+        flexibleSpace: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                Color(0xFF3F51B5),
+                Color(0xFF2196F3),
+              ],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
+          ),
+        ),
+        elevation: 4,
+        shadowColor: Colors.black45,
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'Angel Jen Belicena',
-              style: GoogleFonts.poppins(
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 32),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              _buildName(
+                name: 'Angel Jen Belicena',
                 color: const Color(0xFF007E5D),
-                fontSize: 28,
-                fontWeight: FontWeight.w600,
+                font: GoogleFonts.poppins,
               ),
-            ),
-            const SizedBox(height: 16),
-            Text(
-              'Hannah Shayne Bayogos',
-              style: GoogleFonts.bebasNeue(
+              _buildName(
+                name: 'Hannah Shayne Bayogos',
                 color: const Color(0xFF19305C),
-                fontSize: 28,
-                fontWeight: FontWeight.w600,
+                font: GoogleFonts.bebasNeue,
               ),
-            ),
-            Text(
-              'Eljean Grace Barquillo',
-              style: GoogleFonts.robotoSlab(
-                color: const Color(0XFF44174E),
-                fontSize: 28,
-                fontWeight: FontWeight.w600,
+              _buildName(
+                name: 'Eljean Grace Barquillo',
+                color: const Color(0xFF44174E),
+                font: GoogleFonts.robotoSlab,
               ),
-            ),
-            const SizedBox(height: 16),
-            Text(
-              'Rainnear James Barredo',
-              style: GoogleFonts.bebasNeue(
+              _buildName(
+                name: 'Rainnear James Barredo',
                 color: const Color(0xFF8E24AA),
-                fontSize: 28,
-                fontWeight: FontWeight.w600,
+                font: GoogleFonts.bebasNeue,
               ),
-            ),
-        const SizedBox(height: 16),
-        Text(
-          'Hanes Jedric Abiera',
-          style: GoogleFonts.bebasNeue(
-            color: const Color(0xFF1c1f3b),
-            fontSize: 28,
-            fontWeight: FontWeight.w600,
-          ],
+              _buildName(
+                name: 'Hanes Jedric Abiera',
+                color: const Color(0xFF1C1F3B),
+                font: GoogleFonts.bebasNeue,
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  // Reusable name builder for cleaner code
+  Widget _buildName({
+    required String name,
+    required Color color,
+    required TextStyle Function({required Color color, required double fontSize, required FontWeight fontWeight}) font,
+  }) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8.0),
+      child: Text(
+        name,
+        style: font(
+          color: color,
+          fontSize: 26,
+          fontWeight: FontWeight.w600,
         ),
       ),
     );
