@@ -68,6 +68,14 @@ class _MyHomePageState extends State<MyHomePage> {
                 fontWeight: FontWeight.w600,
               ),
             ),
+            Text(
+              'Eljean Grace Barquillo',
+              style: GoogleFonts.robotoSlab(
+                color: const Color(0XFF44174E),
+                fontSize: 28,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
             const SizedBox(height: 16),
             Text(
               'Rainnear James Barredo',
