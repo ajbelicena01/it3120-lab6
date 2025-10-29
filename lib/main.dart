@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'IT3120 - LAB 6 3A NT',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF448AFF)),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF3F51B5)),
         useMaterial3: true,
         appBarTheme: AppBarTheme(
           backgroundColor: const Color(0xFF448AFF), //title background color
