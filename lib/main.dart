@@ -85,6 +85,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 fontWeight: FontWeight.w600,
               ),
             ),
+        const SizedBox(height: 16),
+        Text(
+          'Hanes Jedric Abiera',
+          style: GoogleFonts.bebasNeue(
+            color: const Color(0xFF1c1f3b),
+            fontSize: 28,
+            fontWeight: FontWeight.w600,
           ],
         ),
       ),
